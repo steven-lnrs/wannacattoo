@@ -1,0 +1,164 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.light {
+  background-color: #fffbe6;
+  color: #333;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark .cat-card {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+}
+
+.dark .header {
+  background-color: #333;
+}
+
+.dark .rent-btn {
+  background-color: #ffc107;
+  color: #111;
+}
+
+.dark .keep-btn {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+.dark .filters select {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  border-color: #ff884d;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffcc66;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: -1rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+
+.cat-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.cat-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.cat-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Keeps aspect ratio, crops if needed */
+  border-radius: 10px;
+}
+/* Shared Styles */
+.rent-btn,
+.keep-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.5rem 0.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Rent Button - Yellow Theme */
+.rent-btn {
+  background-color: #ffdc5c;
+  color: #333;
+}
+
+.rent-btn:hover {
+  background-color: #ffe680;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 220, 92, 0.6);
+}
+
+/* Keep Button - Orange Theme */
+.keep-btn {
+  background-color: #ff8b5c;
+  color: #fff;
+}
+
+.keep-btn:hover {
+  background-color: #ff9966;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 139, 92, 0.5);
+}
+
+header button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header button:hover {
+  background-color: #555;
+  border-color: #ffcc66;
+  transform: scale(1.05);
+}
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.filters select {
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ffcc66;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.dark .filters select {
+  background-color: #222;
+  color: #f5f5f5;
+  border-color: #ff884d;
+}
+
+.filters select:hover {
+  transform: scale(1.03);
+  border-color: #ffaa33;
+}

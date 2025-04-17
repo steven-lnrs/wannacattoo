@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Welcome from './pages/Welcome';
+import Store from './pages/Store';
+import RentPage from './pages/RentPage';
+import KeepPage from './pages/KeepPage';
+import Header from './components/Header';
+import { ThemeProvider } from './ThemeContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Welcome />} />     {/* 👈 Landing Page */}
+          <Route path="/store" element={<Store />} />  {/* 👈 Cat Store */}
+          <Route path="/rent/:catId" element={<RentPage />} />
+          <Route path="/keep/:catId" element={<KeepPage />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
