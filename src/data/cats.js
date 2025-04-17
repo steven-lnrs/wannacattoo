@@ -7,7 +7,7 @@ const cats = [
   {
     id: 1,
     name: "Whiskers",
-    age: 2,
+    age: 2 ,
     color: "White",
     personality: "Curious",
     vaccinated: true,

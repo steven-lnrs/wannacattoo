@@ -5,7 +5,7 @@ function CatCard({ cat }) {
     <div className="cat-card">
       <img src={cat.image} alt={cat.name} className="cat-image" />
       <h3>{cat.name}</h3>
-      <p>Age: {cat.age} years old</p>
+      <p>Age: {cat.age} months old</p>
       <p>Color: {cat.color}</p>
       <p>Personality: {cat.personality}</p>
       <p>Vaccinated: {cat.vaccinated ? '✅' : '❌'}</p>
