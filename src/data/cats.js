@@ -16,7 +16,7 @@ const cats = [
   {
     id: 2,
     name: "Snowball",
-    age: 5,
+    age: 2,
     color: "Tabby",
     personality: "Lazy",
     vaccinated: false,
@@ -25,7 +25,7 @@ const cats = [
   {
     id: 3,
     name: "Mittens",
-    age: 3,
+    age: 7,
     color: "Black",
     personality: "Playful",
     vaccinated: true,
@@ -44,7 +44,7 @@ const cats = [
   {
     id: 5,
     name: "Luna",
-    age: 1,
+    age: 8,
     color: "Black",
     personality: "Playful",
     vaccinated: true,
@@ -53,7 +53,7 @@ const cats = [
   {
     id: 6,
     name: "Oliver",
-    age: 4,
+    age: 3,
     color: "Orange",
     personality: "Chill",
     vaccinated: false,
