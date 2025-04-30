@@ -3,23 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^7.1.0",
+    "@tailwindcss/vite": "^4.1.4",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "assert": "^2.1.0",
+    "constants-browserify": "^1.0.0",
+    "detect-libc": "^2.0.4",
+    "enhanced-resolve": "^5.18.1",
+    "graceful-fs": "^4.2.11",
+    "lightningcss": "^1.29.3",
+    "path-browserify": "^1.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.5.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "stream-browserify": "^3.0.0",
     "styled-components": "^6.1.17",
+    "util": "^0.12.5",
     "wannacattoo": "file:",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +48,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
   }
 }

@@ -1,4 +1,4 @@
-
+/* === Global and Base Styles === */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -38,6 +38,7 @@ body {
   color: #f0f0f0;
   border-color: #ff884d;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -49,11 +50,10 @@ body {
 .cat-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: -1rem;
+  gap: 1rem;
   padding: 2rem;
   justify-items: center;
 }
-
 
 .cat-card {
   background-color: white;
@@ -64,23 +64,35 @@ body {
 }
 
 .cat-image {
-  width: 100%;
-  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .filters {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   padding: 1rem;
-  gap: 1rem;
 }
-.cat-image {
-  width: 200px;
-  height: 200px;
-  object-fit: cover; /* Keeps aspect ratio, crops if needed */
+
+.filters select {
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ffcc66;
   border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.2s ease;
 }
-/* Shared Styles */
+
+.dark .filters select:hover {
+  transform: scale(1.03);
+  border-color: #ffaa33;
+}
+
 .rent-btn,
 .keep-btn {
   padding: 0.6rem 1.2rem;
@@ -94,7 +106,6 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Rent Button - Yellow Theme */
 .rent-btn {
   background-color: #ffdc5c;
   color: #333;
@@ -106,7 +117,6 @@ body {
   box-shadow: 0 0 10px rgba(255, 220, 92, 0.6);
 }
 
-/* Keep Button - Orange Theme */
 .keep-btn {
   background-color: #ff8b5c;
   color: #fff;
@@ -134,31 +144,124 @@ header button:hover {
   border-color: #ffcc66;
   transform: scale(1.05);
 }
-.filters {
+
+/* === Welcome Page Styles === */
+.welcome-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #fff8dc, #ffd699);
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 1rem;
+  padding: 4rem 1rem;
 }
 
-.filters select {
-  padding: 0.4rem 1rem;
-  font-size: 1rem;
-  border: 2px solid #ffcc66;
-  border-radius: 10px;
-  background-color: #fff;
+.dark .welcome-container {
+  background: linear-gradient(to bottom right, #1e1e1e, #2c2c2c);
+}
+
+.welcome-content {
+  max-width: 768px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.welcome-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ff7300;
+  margin-bottom: 1rem;
+  animation: slideInDown 0.8s ease-out;
+}
+
+.dark .welcome-title {
+  color: #ffae42;
+}
+
+.welcome-tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
   color: #333;
-  transition: all 0.2s ease;
+  animation: fadeIn 1.5s ease-out;
 }
 
-.dark .filters select {
-  background-color: #222;
-  color: #f5f5f5;
-  border-color: #ff884d;
+.dark .welcome-tagline {
+  color: #ddd;
 }
 
-.filters select:hover {
-  transform: scale(1.03);
-  border-color: #ffaa33;
+.view-cats-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  background-color: black;
+  color: white;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.dark .view-cats-button {
+  background-color: white;
+  color: black;
+}
+
+.view-cats-button:hover {
+  transform: scale(1.05);
+  border-color: #ff7300;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.welcome-image img {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 600px;
+  height: auto;
+}
+
+.welcome-section {
+  background-color: white;
+  margin-top: 3rem;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  animation: fadeIn 1s ease-in;
+}
+
+.dark .welcome-section {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+}
+
+.welcome-section h2 {
+  font-size: 1.5rem;
+  color: #ff7300;
+  margin-top: 1rem;
+}
+
+.dark .welcome-section h2 {
+  color: #ffae42;
+}
+
+.welcome-section p,
+.welcome-section ul {
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.welcome-section ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
